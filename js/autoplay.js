@@ -143,7 +143,7 @@ function autoplay(){
 	ClearBoard();
 	ResetTime();
 	StarTime();
-	Moves=4; //64
+	Moves=64;
 	
 	
 
