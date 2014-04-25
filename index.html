@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Horse Chess Challenge | Desafío del Caballo de Ajedrez</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link href='http://fonts.googleapis.com/css?family=Amaranth' rel='stylesheet' type='text/css'>
+
+	<link rel="shortcut icon" href="horse.gif" type="image/x-icon">
+
+	<script src="js/modernizr.custom.60251.js"></script>
+
+</head>
+<body>
+	<div id="content">
+		<div id="game">
+			<div id="title">
+				<div class="twitter">
+					<a href="https://twitter.com/JoseCodFacilito" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @JoseCodFacilito</a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+					<a href="https://twitter.com/share" class="twitter-share-button" data-via="JoseCodFacilito" data-size="large" data-count="none" data-text="Juego de El Reto del Caballo de Ajedrez | Horse Chess Challenge Game ">Tweet</a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+				</div>
+				<div>
+					<h1>Horse Chess Challenge</h1>
+					<h1>Reto del Caballo de Ajedrez</h1>
+				</div>
+				<div id="scores">
+					<div class="score">
+						<p>Options</p>
+						<p id="options">0</p>
+					</div>
+					<div class="score">
+						<p>Moves</p>
+						<p id="moves">63</p>
+					</div>
+					<div class="score">
+						<p>Time</p>
+						<p id="time"><span id="minutes">00</span>:<span id="seconds">00</span></p>
+					</div>
+				</div>
+			</div>
+			<div id="content_board">
+				<div id="board">
+					<div class="row">
+						<div id="c07" onclick="CheckCell(0,7)" class="cell white"></div>
+						<div id="c17" onclick="CheckCell(1,7)" class="cell black"></div>
+						<div id="c27" onclick="CheckCell(2,7)" class="cell white"></div>
+						<div id="c37" onclick="CheckCell(3,7)" class="cell black"></div>
+						<div id="c47" onclick="CheckCell(4,7)" class="cell white"></div>
+						<div id="c57" onclick="CheckCell(5,7)" class="cell black"></div>
+						<div id="c67" onclick="CheckCell(6,7)" class="cell white"></div>
+						<div id="c77" onclick="CheckCell(7,7)" class="cell black"></div>
+					</div>
+					<div class="row">
+						<div id="c06" onclick="CheckCell(0,6)" class="cell black"></div>
+						<div id="c16" onclick="CheckCell(1,6)" class="cell white"></div>
+						<div id="c26" onclick="CheckCell(2,6)" class="cell black"></div>
+						<div id="c36" onclick="CheckCell(3,6)" class="cell white"></div>
+						<div id="c46" onclick="CheckCell(4,6)" class="cell black"></div>
+						<div id="c56" onclick="CheckCell(5,6)" class="cell white"></div>
+						<div id="c66" onclick="CheckCell(6,6)" class="cell black"></div>
+						<div id="c76" onclick="CheckCell(7,6)" class="cell white"></div>
+					</div>
+					<div class="row">
+						<div id="c05" onclick="CheckCell(0,5)" class="cell white"></div>
+						<div id="c15" onclick="CheckCell(1,5)" class="cell black"></div>
+						<div id="c25" onclick="CheckCell(2,5)" class="cell white"></div>
+						<div id="c35" onclick="CheckCell(3,5)" class="cell black"></div>
+						<div id="c45" onclick="CheckCell(4,5)" class="cell white"></div>
+						<div id="c55" onclick="CheckCell(5,5)" class="cell black"></div>
+						<div id="c65" onclick="CheckCell(6,5)" class="cell white"></div>
+						<div id="c75" onclick="CheckCell(7,5)" class="cell black"></div>
+					</div>
+					<div class="row">
+						<div id="c04" onclick="CheckCell(0,4)" class="cell black"></div>
+						<div id="c14" onclick="CheckCell(1,4)" class="cell white"></div>
+						<div id="c24" onclick="CheckCell(2,4)" class="cell black"></div>
+						<div id="c34" onclick="CheckCell(3,4)" class="cell white"></div>
+						<div id="c44" onclick="CheckCell(4,4)" class="cell black"></div>
+						<div id="c54" onclick="CheckCell(5,4)" class="cell white"></div>
+						<div id="c64" onclick="CheckCell(6,4)" class="cell black"></div>
+						<div id="c74" onclick="CheckCell(7,4)" class="cell white"></div>
+					</div>
+					<div class="row">
+						<div id="c03" onclick="CheckCell(0,3)" class="cell white"></div>
+						<div id="c13" onclick="CheckCell(1,3)" class="cell black"></div>
+						<div id="c23" onclick="CheckCell(2,3)" class="cell white"></div>
+						<div id="c33" onclick="CheckCell(3,3)" class="cell black"></div>
+						<div id="c43" onclick="CheckCell(4,3)" class="cell white"></div>
+						<div id="c53" onclick="CheckCell(5,3)" class="cell black"></div>
+						<div id="c63" onclick="CheckCell(6,3)" class="cell white"></div>
+						<div id="c73" onclick="CheckCell(7,3)" class="cell black"></div>
+					</div>
+					<div class="row">
+						<div id="c02" onclick="CheckCell(0,2)" class="cell black"></div>
+						<div id="c12" onclick="CheckCell(1,2)" class="cell white"></div>
+						<div id="c22" onclick="CheckCell(2,2)" class="cell black"></div>
+						<div id="c32" onclick="CheckCell(3,2)" class="cell white"></div>
+						<div id="c42" onclick="CheckCell(4,2)" class="cell black"></div>
+						<div id="c52" onclick="CheckCell(5,2)" class="cell white"></div>
+						<div id="c62" onclick="CheckCell(6,2)" class="cell black"></div>
+						<div id="c72" onclick="CheckCell(7,2)" class="cell white"></div>
+					</div>
+					<div class="row">
+						<div id="c01" onclick="CheckCell(0,1)" class="cell white"></div>
+						<div id="c11" onclick="CheckCell(1,1)" class="cell black"></div>
+						<div id="c21" onclick="CheckCell(2,1)" class="cell white"></div>
+						<div id="c31" onclick="CheckCell(3,1)" class="cell black"></div>
+						<div id="c41" onclick="CheckCell(4,1)" class="cell white"></div>
+						<div id="c51" onclick="CheckCell(5,1)" class="cell black"></div>
+						<div id="c61" onclick="CheckCell(6,1)" class="cell white"></div>
+						<div id="c71" onclick="CheckCell(7,1)" class="cell black"></div>
+					</div>
+					<div class="row">
+						<div id="c00" onclick="CheckCell(0,0)" class="cell black"></div>
+						<div id="c10" onclick="CheckCell(1,0)" class="cell white"></div>
+						<div id="c20" onclick="CheckCell(2,0)" class="cell black"></div>
+						<div id="c30" onclick="CheckCell(3,0)" class="cell white"></div>
+						<div id="c40" onclick="CheckCell(4,0)" class="cell black"></div>
+						<div id="c50" onclick="CheckCell(5,0)" class="cell white"></div>
+						<div id="c60" onclick="CheckCell(6,0)" class="cell black"></div>
+						<div id="c70" onclick="CheckCell(7,0)" class="cell white"></div>
+					</div>
+				</div>
+			</div>
+			<div id="rules">
+				<div class="info">
+					<p class="english">Move the horse over board to complete all cells.</p>
+					<p class="english">Game created by José Javier Villena</p>
+				</div>
+				<div class="info">
+					<p class="spanish">Mueve el caballo a lo largo del tablero hasta haber ocupado todas las casillas.</p>
+					<p class="spanish">Juego creado por José Javier Villena</p>
+				</div>
+				<div class="info">
+					<p class="contact">Twitter: <a href="https://twitter.com/JoseCodFacilito" target="_blank">@JoseCodFacilito</a></p>
+					<p class="contact">Youtube: <a href="http://youtube.com/user/jotajotavm?sub_confirmation=1" target="_blank">jotajotavm</a></p>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+
+
+	<div id="message">
+		<p id="notification"></p>
+		<p id="final_score"></p>
+		<div class="share">
+		    <p id="button" onclick="hide_message()"></p>
+			<div id="tweet_game">
+		    	<a id="tweet_game_over" href="https://twitter.com/share" class="twitter-share-button" target="_blank" data-via="JoseCodFacilito" data-text="I'm not able to do this game! | No soy capaz de hacer este juego!!" data-size="large" data-count="none" >Tweet you try!</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+				<script src="js/autoplay.js"></script>
+
+				<a id="tweet_game_ok" href="https://twitter.com/share" class="twitter-share-button" target="_blank" data-via="JoseCodFacilito" data-text="I've got the challenge of this game!! | Por fín he logrado el reto de este juego!!" data-size="large" data-count="none" >Tweet you win!</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+				<script src="js/autoplay.js"></script>
+		    </div>
+	    </div>	    
+	</div>
+
+
+</body>
+</html>

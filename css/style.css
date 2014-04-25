@@ -1,0 +1,245 @@
+body{
+	font-family: 'Amaranth', 'sans-serif';
+	font-size: 16px;
+	color: #776E65;
+	background-color: #FAF8EF;
+}
+#content{
+	width: 100%;
+	margin: 0 auto;
+}
+
+#game{
+	position: relative;
+	width: 80%;
+	margin:0 auto;
+}
+
+#game h1{
+	font-size: 3em;
+	text-align: center;
+	width: 100%;
+	display: inline-block;
+	margin: 10px 0px 20px 0px;
+}
+#content_board{
+	text-align: center;
+}
+#board{
+	width: auto;
+	position: relative;
+	padding: 3px 0px 0px 3px;
+}
+#board .row{
+	padding: 0px;
+}
+
+#board .row .cell{
+	margin: -3px;
+	padding: 0px;
+	height: 33px;
+	width: 33px;
+	display: inline-block;
+	background-image: url(../horse.gif);
+	position: relative;
+;}
+#board .row .cell:hover{
+	box-shadow: inset 0px 0px 6px green,
+				inset 0px 0px 2px green,
+				inset 0px 0px 15px green;
+}
+
+#board .row .cell img{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+
+}
+
+#board .row .white{
+	background: rgb(246,230,180); /* Old browsers */
+background: -moz-linear-gradient(45deg,  rgba(246,230,180,1) 0%, rgba(234,190,136,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(246,230,180,1)), color-stop(100%,rgba(234,190,136,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(45deg,  rgba(246,230,180,1) 0%,rgba(234,190,136,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(45deg,  rgba(246,230,180,1) 0%,rgba(234,190,136,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(45deg,  rgba(246,230,180,1) 0%,rgba(234,190,136,1) 100%); /* IE10+ */
+background: linear-gradient(45deg,  rgba(246,230,180,1) 0%,rgba(234,190,136,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6e6b4', endColorstr='#eabe88',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+#board .row .black{
+background: rgb(81,66,0); /* Old browsers */
+background: -moz-linear-gradient(45deg,  rgba(81,66,0,1) 0%, rgba(66,51,39,1) 0%); /* FF3.6+ */
+background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(81,66,0,1)), color-stop(0%,rgba(66,51,39,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(45deg,  rgba(81,66,0,1) 0%,rgba(66,51,39,1) 0%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(45deg,  rgba(81,66,0,1) 0%,rgba(66,51,39,1) 0%); /* Opera 11.10+ */
+background: -ms-linear-gradient(45deg,  rgba(81,66,0,1) 0%,rgba(66,51,39,1) 0%); /* IE10+ */
+background: linear-gradient(45deg,  rgba(81,66,0,1) 0%,rgba(66,51,39,1) 0%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#514200', endColorstr='#423327',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+#rules{
+	width: 60%;
+	margin-left: 20%;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	text-align: center;
+}
+#rules .info{
+	display: inline-block;
+	vertical-align: top;
+	width: 100%;
+}
+#rules p{
+	width: 90%;
+	margin-left: 5%;
+}
+
+#rules p.contact{
+	text-align: center;
+}
+#rules p a{
+	color: #423327;
+}
+
+#title{
+	width: 100%;
+	margin-bottom: 15px;
+	text-align: center;
+}
+#title div.twitter{
+	margin: 20px 0px;
+}
+
+#title #scores{
+	text-align: center;
+	margin-top: 30px;
+}
+#title #scores .score{
+	background-color:#776E65; 
+	border-radius: 25px;
+	color: #FAF8EF;
+	display: inline-block;
+	font-size: 1.5em;
+	padding: 0px 15px;
+	text-align: center;
+	margin-bottom: 10px;
+	width: 140px;
+}
+#title #scores .score p{
+	margin-top: 10px;
+}
+#title #scores .score #time{
+	text-align: left;
+	padding-left: 10px;
+}
+#title #scores .score #options,
+#title #scores .score #moves, 
+#title #scores .score #time{
+	font-size: 2em;
+	margin: -20px 0px 0px 0px;
+
+}
+
+
+#message{
+	width: 100%;
+	height: 1300px; /*100%;*/
+	background-color: rgba(250,248,239, 0.6);
+	position: absolute;
+	top: 90px;
+	left: 0px;
+	text-align: center;
+}
+#message div.share{
+	text-align: center;
+	margin: 0 auto;
+}
+#message div#tweet_game{
+	color: rgb(250,248,239);
+	background-color:#1B190F;
+	padding: 10px 0px 20px 0px;
+	border-radius: 0px 0px 20px 20px;
+	margin-top: -40px;
+	width: 70%;
+	margin-left: 15%;
+	text-align: center;
+}
+#message p#button{
+	font-size: 2.5em;
+	font-weight: bolder;
+	background-color:#1B190F;
+	border-radius: 20px 20px 0px 0px;
+	color: rgb(250,248,239);
+	margin-top: -50px;
+	width: 70%;
+	margin-left: 15%;
+	text-align: center;
+	line-height: 80px;
+}
+#message p#button:hover{
+	cursor: pointer;
+}
+#message p#final_score{
+	font-size: 4em;
+	font-weight: bolder;
+	color:#1B190F;
+	margin-top: -50px;
+}
+#message p#notification{
+	font-size: 6em;
+	font-weight: bolder;
+	color:#1B190F;
+	margin-top: 300px;
+}
+
+
+@media screen and (min-width: 430px){
+	#board .row .cell{
+		height:  40px;
+		width: 40px;
+	}
+}
+
+
+@media screen and (min-width: 480px){
+	#board .row .cell{
+		height:  47px;
+		width: 47px;
+	}
+	
+}
+@media screen and (min-width: 767px){
+	#board .row .cell{
+		height: 50px;
+		width: 50px;
+	}
+	#title #scores{/*
+		text-align: right;
+		margin-right: 10%;*/
+	}
+	#rules .info{
+		width: 40%;
+	}
+}
+
+@media screen and (min-width: 950px){
+	#board .row .cell{
+		height: 60px;
+		width: 60px;
+	}
+	#title h1{
+		width: 30%;
+		vertical-align: middle;
+		text-align: center;
+
+	}
+}
+
+
+
+
+
+
+
